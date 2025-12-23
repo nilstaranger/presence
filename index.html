@@ -119,22 +119,24 @@
 
         function Experience() {
             return html`
-                <${Float} speed=${1.0} rotationIntensity=${0.2} floatIntensity=${0.2}>
+                <${Float} speed=${0.5} rotationIntensity=${0.1} floatIntensity=${0.1}>
                     <${Sparkles} 
+                        position=${[0, 0, -2]}
+                        scale=${[15, 15, 10]}
                         count=${300}
-                        scale=${15}
-                        size=${0.8}
-                        speed=${0.05}
-                        opacity=${1}
+                        size=${0.4}
+                        speed=${0.02}
+                        opacity=${0.8}
                         color="#ffd700" 
                     />
                     <!-- Subtle secondary dust -->
                      <${Sparkles} 
+                        position=${[0, 0, -2]}
+                        scale=${[20, 20, 10]}
                         count=${150}
-                        scale=${20}
-                        size=${0.4}
-                        speed=${0.02}
-                        opacity=${0.5}
+                        size=${0.2}
+                        speed=${0.01}
+                        opacity=${0.4}
                         color="#ffffff" 
                     />
                 <//>
