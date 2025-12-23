@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Subtle Parallax Effect on Scroll
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const image = document.querySelector('.hero-image');
-        const text = document.querySelector('.hero-text');
-
-        // Very subtle movement for "heavy/expensive" feel
-        if (image) {
-            image.style.transform = `translateY(${scrolled * 0.1}px) scale(1)`;
-        }
+    // Subtle parallax or cursor following could go here
+    // For now, keeping it extremely lightweight for "Quiet Luxury"
+    
+    const wrapper = document.querySelector('.content-wrapper');
+    
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 10;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        
+        wrapper.style.transform = `translate(${x}px, ${y}px)`;
+        wrapper.style.transition = 'transform 0.5s ease-out';
     });
-
 });
